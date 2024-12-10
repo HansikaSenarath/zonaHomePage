@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   color: #000;
 }
 
@@ -17,14 +17,25 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
 }
 
-.navbar-left .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #000;
+.logo {
+  display: flex;
+  align-items: center; /* Vertically center the logo */
+  justify-content: center; /* Horizontally center the logo */
+  gap: 8px; /* Add gap between elements if needed */
+  width: 107px; /* Match the Figma "Hug" width */
+  height: 30px; /* Match the Figma "Hug" height */
+  margin-left: 3rem;
+}
+
+.logo img {
+  max-width: 100%; /* Ensure the image fits within the container */
+  max-height: 100%; /* Ensure the image fits within the container */
+  object-fit: contain; /* Maintain aspect ratio of the image */
 }
 
 .navbar-center {
@@ -36,14 +47,26 @@ body {
 .nav-item {
   font-size: 14px;
   cursor: pointer;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.6rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-item .dot {
+  margin-right: 8px; /* Add space between the dot and text */
+  font-size: 1.2rem; /* Adjust dot size if needed */
+  position: relative; /* Enable positioning */
+  top: 2px;
+  
 }
 
 .nav-item.home {
   background-color: #fff;
   color: #000;
-  border: 1px solid #D9D9D9;
-  border-radius: 50px;
+  border: 1px solid #D9D9D9; /* Match the 1px border from Figma */
+  border-radius: 30px; /* Match the 30px radius from Figma */
+  padding: 3px 20px; /* Top/Bottom = 3px as per Figma, adjust sides for spacing */
+  width: 84px; /* Fixed width as specified in Figma */
+  height: 32px; /* Hug height as specified in Figma */
   transition: all 0.3s ease;
 }
 
@@ -59,15 +82,17 @@ body {
 .contact-btn {
   display: flex;
   align-items: center;
-  gap: 0.2rem;
+  gap: 10px; /* Match the gap from Figma */
   background-color: #18191C;
   color: #fff;
   border: none;
-  padding: 0.72rem 1.4rem;
-  border-radius: 50px;
+  padding: 8px 20px; /* Match padding: Top/Bottom = 8px, Left/Right = 20px */
+  border-radius: 40px; /* Match the radius from Figma */
   cursor: pointer;
   font-size: 14px;
   transition: all 0.3s ease;
+  width: 144px; /* Match the width from Figma */
+  height: 48px; /* Match the height from Figma */
 }
 
 .contact-btn .phone-icon {
@@ -79,15 +104,20 @@ body {
   background-color: #333;
 }
 
+
+
 /* Hero Section */
 .hero {
   padding: 4rem;
   background-color: white;
+ padding-top: 100px;
 }
 
 .hero-title {
   font-size: 140px;
+  color: #18191C;
   font-weight: 500;
+  line-height: 130px;
   margin-bottom: 8rem;
   text-align: left;
 }
@@ -110,13 +140,14 @@ body {
   margin-top: 4rem;
   text-align: left;
   max-width: 25ch;
-  line-height: 1;
+  line-height: 30px;
   word-wrap: break-word;
 }
 
 .hero-description {
   font-size: 18px;
   font-weight: 400;
+  line-height: 28px;
   margin-bottom: 1.5rem;
   text-align: left;
 }
@@ -141,6 +172,13 @@ body {
   border: none;
 }
 
+.explore-btn .ai-icons{
+  width: 24px; /* Adjust width as needed */
+  height: 24px; /* Adjust height as needed */
+  vertical-align: middle; /* Ensures proper alignment */
+  /* Moves the image 4px down */
+}
+
 .explore-btn:hover {
   background-color: #333;
 }
@@ -151,9 +189,39 @@ body {
   border: 1px solid #18191C;
 }
 
+.demo-btn .ai-icon{
+    width: 24px; /* Adjust width as needed */
+  height: 24px; /* Adjust height as needed */
+  vertical-align: middle; /* Ensures proper alignment */
+}
+
 .demo-btn:hover {
   background-color: #f4f4f4;
 }
+.ai-icon {
+  width: 16px; /* Adjust width as needed */
+  height: 16px; /* Adjust height as needed */
+  animation: rotate360 2s linear infinite; /* Apply the animation */
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg); /* Start from 0 degrees */
+  }
+  to {
+    transform: rotate(-360deg); /* Complete a full rotation */
+  }
+}
+
+.hero-image {
+  width: 1472px; /* Set the width as per Figma */
+  height: 643px; /* Set the height as per Figma */
+  margin-top: -520px; /* Add space above the image */
+  margin-right: 30px; /* Add space on the left side */
+  object-fit: contain;
+
+}
+
 
 /* Plans & Pricing Section */
 .plans-pricing {
@@ -314,7 +382,6 @@ body {
   background-color: #333;
 }
 
-
 /* AI Section */
 .ai-section {
   display: flex;
@@ -324,26 +391,34 @@ body {
   background-color: #ffffff;
 }
 
+/* AI Card */
 .ai-card {
   background-color: #F6F6F9;
   padding: 3rem;
   text-align: center;
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative; /* To allow absolute positioning for the image */
+  background-image: url('assets/Ellipse\ 2827.png'); /* Your background image */
+  background-position: left bottom; /* Position the image at the bottom left */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-size: auto; /* Adjust the size based on the image's natural dimensions */
 }
 
 .ai-title {
   font-size: 80px;
   font-weight: 500;
   color: #18191C;
+  line-height: 90px;
   margin-bottom: 1.5rem;
 }
 
 .ai-subtitle {
   font-size: 16px;
   color: #999DA6;
+  line-height: 24px;
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 2rem;
@@ -377,15 +452,12 @@ body {
   color: black;
 }
 
-.ai-icon {
-  width: 20px;
-  height: 20px;
+.ai-icon1 , .ai-icon2 {
+  width: 24px;
+  height: 24px;
   margin-left: 0.8rem;
 }
 
-.ai-btn:hover {
-  background-color: #333;
-}
 
 
 
@@ -404,19 +476,24 @@ body {
 }
 
 .footer-bg-img {
+  
   width: 100%;
+  margin-bottom: -500px;
   height: auto;
+  transform: translateX(-80px);
 }
 
 /* Navigation Links */
 .footer-nav {
+
   margin-top: 2rem;
+  
 }
 
 .footer-link {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px;
   margin: 0 1rem;
   transition: color 0.3s ease;
 }
@@ -438,13 +515,24 @@ body {
 
 /* AI Models Description */
 .footer-description {
-  font-size: 24px;
-  color: #7C848E;
-  font-weight: 400;
+  font-size: 24px; /* Set the font size */
+  font-family: 'Poppins', sans-serif; /* Set the font family to Poppins */
+  font-weight: 400; /* Set the font weight */
+  line-height: 32px; /* Set the line height */
+  letter-spacing: -2%; /* Set the letter spacing */
+  text-align: center; /* Align the text to the center */
+  color: #7C848E; /* Keep the original color */
   margin-top: 1.5rem;
   max-width: 800px;
   margin: 1.5rem auto;
+  width: 567px; /* Set the width as per Figma */
+  height: 96px; /* Set the height as per Figma */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 90px;
 }
+
 
 /* Email Input and Group Icon */
 .footer-email {
@@ -454,20 +542,18 @@ body {
   margin-top: 1.5rem;
 }
 
-.email-input {
-  padding: 0.8rem 1.5rem;
-  font-size: 16px;
-  border-radius: 50px;
-  border: none;
-  margin-right: 1rem;
-  width: 300px;
-  max-width: 80%;
+.email-title {
+  font-size: 70px;
+  color: #3A3E44;
+  margin-right: 220px; /* Optional: to remove any default margins */
 }
 
 .email-icon {
-  width: 30px;
-  height: 30px;
+  width: 89px;
+  height: 89px;
   cursor: pointer;
+  
+ 
 }
 
 /* Footer Line */
@@ -476,7 +562,7 @@ body {
 }
 
 .footer-line-img {
-  width: 100%;
+  width: 70%;
   height: auto;
 }
 
