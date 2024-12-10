@@ -338,30 +338,38 @@ body {
   background-color: #fff;
 }
 
-/* Second card: Premium plan (gradient background with white section below) */
+/* Second card: Premium plan with split background */
 .premium-plan {
-  background: linear-gradient(to bottom, #DE35FF 0%, #3A65FF 64%, #16F1FF 100%);
-  border-radius: 16px 16px 0 0;
-  color: #fff;
-  text-align: left;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.premium-plan .plan-title {
+/* Top section with gradient background */
+.premium-top {
+  background: linear-gradient(to bottom, #DE35FF 0%, #3A65FF 64%, #16F1FF 100%);
+  padding: 2rem;
+  text-align: left;
+  color: #fff;
+}
+
+.premium-top .plan-title {
   font-size: 24px;
   color: #fff;
 }
 
-.premium-plan .price-amount {
+.premium-top .plan-price {
   font-size: 52px;
   color: #fff;
 }
 
-.premium-plan .price-month {
-  font-size: 20px;
-  color: #fff;
+/* Bottom section with white background */
+.plan-benefits {
+  background-color: #fff;
+  color: #000;
+  padding: 2rem;
+  border-radius: 0 0 8px 8px;
+  margin-top: 1rem; /* Add some space between the price and the benefits section */
 }
 
 .premium-plan .check-icon {
@@ -369,18 +377,6 @@ body {
   color: #12B76A;
 }
 
-.premium-plan .plan-benefits {
-  background-color: #fff;
-  color: #000;
-  padding: 2rem;
-  border-radius: 8px 8px 0 0;
-  margin-top: 1rem; /* Add some space between the price and the benefits section */
-}
-
-/* Hover effect for the buttons */
-.plan-btn:hover {
-  background-color: #333;
-}
 
 /* AI Section */
 .ai-section {
