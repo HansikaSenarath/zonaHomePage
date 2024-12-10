@@ -1,151 +1,619 @@
-/* General Styles */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: white;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #000;
 }
 
-/* Navbar Styles */
+/* Navbar Styling */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 50px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
+.navbar-left .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
 }
 
-.logo img {
-    height: 30px;
-    margin-right: 10px;
+.navbar-center {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.nav-item {
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    font-weight: 500;
+.nav-item.home {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #D9D9D9;
+  border-radius: 50px;
+  transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: #6200ee;
+.nav-item.home:hover {
+  background-color: #f4f4f4;
 }
 
-.contact-button {
-    background-color: black;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    text-decoration: none;
+.navbar-right {
+  display: flex;
+  align-items: center;
 }
 
-.contact-button:hover {
-    background-color: #333;
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  background-color: #18191C;
+  color: #fff;
+  border: none;
+  padding: 0.72rem 1.4rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
-.contact-button img {
-    height: 16px;
+.contact-btn .phone-icon {
+  font-size: 1rem;
+  margin-right: 0.5rem;
 }
 
-/* Hero Section Headline */
-.hero-headline {
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    margin: 40px 0;
-    color: #333;
+.contact-btn:hover {
+  background-color: #333;
 }
 
-/* Hero Section Styles */
+/* Hero Section */
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 50px;
-  
-    color: black;
+  padding: 4rem;
+  background-color: white;
+}
+
+.hero-title {
+  font-size: 140px;
+  font-weight: 500;
+  margin-bottom: 8rem;
+  text-align: left;
 }
 
 .hero-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    max-width: 1200px;
-    width: 100%;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 1.5rem;
 }
 
-.hero-left {
-    flex: 1;
-    text-align: left;
+.hero-left, .hero-right {
+  flex: 1;
 }
 
-.hero-left .tagline {
-    font-size: 18px;
-    color: #444;
-    font-weight: bold;
+.hero-subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 4rem;
+  text-align: left;
+  max-width: 25ch;
+  line-height: 1;
+  word-wrap: break-word;
 }
 
-.hero-right {
-    flex: 1;
-    text-align: left;
+.hero-description {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
-.hero-right .subtitle {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #444;
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.buttons {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
+.btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.btn-primary {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
+.explore-btn {
+  background-color: #18191C;
+  color: #fff;
+  border: none;
 }
 
-.btn-primary:hover {
-    background-color: #333;
+.explore-btn:hover {
+  background-color: #333;
 }
 
-.btn-secondary {
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    border: 2px solid black;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
+.demo-btn {
+  background-color: #fff;
+  color: #18191C;
+  border: 1px solid #18191C;
 }
 
-.btn-secondary:hover {
-    background-color: #f7f7f7;
+.demo-btn:hover {
+  background-color: #f4f4f4;
+}
+
+/* Plans & Pricing Section */
+.plans-pricing {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.plans-header {
+  margin-bottom: 2rem;
+}
+
+.plans-title {
+  font-size: 80px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.plans-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+}
+
+.plans-cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.plan-card {
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: left; /* Align text to the left */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure that button is positioned lower */
+}
+
+.free-plan .plan-title,
+.premium-plan .plan-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.plan-price {
+  font-size: 52px;
+  font-weight: 500;
+  color: #18191C;
+}
+
+.price-amount {
+  font-size: 52px;
+  color: #18191C;
+  font-weight: 500;
+}
+
+.price-month {
+  font-size: 20px;
+  font-weight: 500;
+  color: #18191C;
+}
+
+.plan-benefits {
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.benefit {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #D1FADF;
+  color: #12B76A;
+  font-size: 14px;
+  text-align: center;
+  line-height: 18px;
+  margin-right: 0.5rem;
+}
+
+.plan-buttons {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  margin-top: auto; /* Push the button to the bottom of the card */
+}
+
+.plan-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 14px;
+  background-color: #18191C;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plan-btn:hover {
+  background-color: #333;
+}
+
+/* First card: Fee plan (left-aligned, white background) */
+.free-plan {
+  background-color: #fff;
+}
+
+/* Second card: Premium plan (gradient background with white section below) */
+.premium-plan {
+  background: linear-gradient(to bottom, #DE35FF 0%, #3A65FF 64%, #16F1FF 100%);
+  border-radius: 16px 16px 0 0;
+  color: #fff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.premium-plan .plan-title {
+  font-size: 24px;
+  color: #fff;
+}
+
+.premium-plan .price-amount {
+  font-size: 52px;
+  color: #fff;
+}
+
+.premium-plan .price-month {
+  font-size: 20px;
+  color: #fff;
+}
+
+.premium-plan .check-icon {
+  background-color: #D1FADF;
+  color: #12B76A;
+}
+
+.premium-plan .plan-benefits {
+  background-color: #fff;
+  color: #000;
+  padding: 2rem;
+  border-radius: 8px 8px 0 0;
+  margin-top: 1rem; /* Add some space between the price and the benefits section */
+}
+
+/* Hover effect for the buttons */
+.plan-btn:hover {
+  background-color: #333;
+}
+
+
+/* AI Section */
+.ai-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+.ai-card {
+  background-color: #F6F6F9;
+  padding: 3rem;
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ai-title {
+  font-size: 80px;
+  font-weight: 500;
+  color: #18191C;
+  margin-bottom: 1.5rem;
+}
+
+.ai-subtitle {
+  font-size: 16px;
+  color: #999DA6;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.ai-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.ai-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn {
+  background-color: #18191C;
+}
+
+.demo-btn {
+  background-color: #ffffff;
+  color: black;
+}
+
+.ai-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.8rem;
+}
+
+.ai-btn:hover {
+  background-color: #333;
+}
+
+
+
+/* Footer Section */
+.footer-section {
+  background-color: #1F2023;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #fff;
+}
+
+/* Footer Background Image */
+.footer-background {
+  position: relative;
+  width: 100%;
+}
+
+.footer-bg-img {
+  width: 100%;
+  height: auto;
+}
+
+/* Navigation Links */
+.footer-nav {
+  margin-top: 2rem;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #16F1FF;
+}
+
+/* Footer Logo */
+.footer-logo {
+  margin-top: 2rem;
+}
+
+.footer-logo-img {
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* AI Models Description */
+.footer-description {
+  font-size: 24px;
+  color: #7C848E;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  max-width: 800px;
+  margin: 1.5rem auto;
+}
+
+/* Email Input and Group Icon */
+.footer-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.email-input {
+  padding: 0.8rem 1.5rem;
+  font-size: 16px;
+  border-radius: 50px;
+  border: none;
+  margin-right: 1rem;
+  width: 300px;
+  max-width: 80%;
+}
+
+.email-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Footer Line */
+.footer-line {
+  margin-top: 2rem;
+}
+
+.footer-line-img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tech-Land Section */
+.tech-land-section {
+  background: #fff;
+  padding: 4rem 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Title */
+.tech-land-title {
+  font-size: 50px;
+  color: #18191C;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+/* Content Wrapper */
+.tech-land-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Number List */
+.number-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.number {
+  font-size: 24px;
+  color: #A5A5A5;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.number.active {
+  color: #6E34F6;
+}
+
+.number::before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background-color: #D8D8D8;
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+
+/* Text Content */
+.content-part {
+  flex: 2;
+}
+
+.content-item {
+  margin-bottom: 2rem;
+}
+
+.content-image {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+.content-title {
+  font-size: 18px;
+  color: #18191C;
+  margin-bottom: 0.5rem;
+}
+
+.content-title.active {
+  color: #6E34F6;
+}
+
+.content-description {
+  font-size: 14px;
+  color: #767A85;
+  line-height: 1.5;
+}
+
+/* Case Study Card */
+.case-study-card {
+  flex: 2;
+  background: linear-gradient(180deg, rgba(110, 52, 246, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.case-study-card h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #18191C;
+  margin-bottom: 1rem;
+}
+
+.case-study-card p {
+  font-size: 14px;
+  color: #767A85;
+  margin-bottom: 2rem;
+}
+
+.case-study-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #18191C;
+}
+
+.stat p {
+  font-size: 14px;
+  color: #767A85;
 }
