@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body {
   color: #000;
 }
 
-/* Navbar Styling */
+/*header section */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -24,18 +24,18 @@ body {
 
 .logo {
   display: flex;
-  align-items: center; /* Vertically center the logo */
-  justify-content: center; /* Horizontally center the logo */
-  gap: 8px; /* Add gap between elements if needed */
-  width: 107px; /* Match the Figma "Hug" width */
-  height: 30px; /* Match the Figma "Hug" height */
+  align-items: center; 
+  justify-content: center; 
+  gap: 8px;
+  width: 107px; 
+  height: 30px; 
   margin-left: 3rem;
 }
 
 .logo img {
-  max-width: 100%; /* Ensure the image fits within the container */
-  max-height: 100%; /* Ensure the image fits within the container */
-  object-fit: contain; /* Maintain aspect ratio of the image */
+  max-width: 100%; 
+  max-height: 100%;
+  object-fit: contain; 
 }
 
 .navbar-center {
@@ -52,9 +52,9 @@ body {
 }
 
 .nav-item .dot {
-  margin-right: 8px; /* Add space between the dot and text */
-  font-size: 1.2rem; /* Adjust dot size if needed */
-  position: relative; /* Enable positioning */
+  margin-right: 8px; 
+  font-size: 1.2rem; 
+  position: relative; 
   top: 2px;
   
 }
@@ -62,11 +62,11 @@ body {
 .nav-item.home {
   background-color: #fff;
   color: #000;
-  border: 1px solid #D9D9D9; /* Match the 1px border from Figma */
-  border-radius: 30px; /* Match the 30px radius from Figma */
-  padding: 3px 20px; /* Top/Bottom = 3px as per Figma, adjust sides for spacing */
-  width: 84px; /* Fixed width as specified in Figma */
-  height: 32px; /* Hug height as specified in Figma */
+  border: 1px solid #D9D9D9; 
+  border-radius: 30px; 
+  padding: 3px 20px; 
+  width: 84px; 
+  height: 32px; 
   transition: all 0.3s ease;
 }
 
@@ -82,17 +82,17 @@ body {
 .contact-btn {
   display: flex;
   align-items: center;
-  gap: 10px; /* Match the gap from Figma */
+  gap: 10px;
   background-color: #18191C;
   color: #fff;
   border: none;
-  padding: 8px 20px; /* Match padding: Top/Bottom = 8px, Left/Right = 20px */
-  border-radius: 40px; /* Match the radius from Figma */
+  padding: 8px 20px; 
+  border-radius: 40px; 
   cursor: pointer;
   font-size: 14px;
   transition: all 0.3s ease;
-  width: 144px; /* Match the width from Figma */
-  height: 48px; /* Match the height from Figma */
+  width: 144px; 
+  height: 48px; 
 }
 
 .contact-btn .phone-icon {
@@ -103,16 +103,25 @@ body {
 .contact-btn:hover {
   background-color: #333;
 }
-
-
-
-
+/* end of the header */ 
 
 /* Hero Section */
 .hero {
+  position: relative;
   padding: 4rem;
-  background-color: white;
- padding-top: 100px;
+  padding-top: 100px;
+  background-size: cover;
+  background-position: center;
+  animation: backgroundSwitch 3s linear infinite; 
+}
+
+@keyframes backgroundSwitch {
+  0%, 50% {
+    background-image: url('assets/home1.png');
+  }
+  50.01%, 100% {
+    background-image: url('assets/home2.png');
+  }
 }
 
 .hero-title {
@@ -175,10 +184,9 @@ body {
 }
 
 .explore-btn .ai-icons{
-  width: 24px; /* Adjust width as needed */
-  height: 24px; /* Adjust height as needed */
-  vertical-align: middle; /* Ensures proper alignment */
-  /* Moves the image 4px down */
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
 }
 
 .explore-btn:hover {
@@ -188,51 +196,164 @@ body {
 .demo-btn {
   background-color: #fff;
   color: #18191C;
-  border: 1px solid #18191C;
+  border: 2px solid #ffffff;
+  box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.1),  /* Inset shadow for emboss effect */
+              1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.demo-btn .ai-icon{
-    width: 24px; /* Adjust width as needed */
-  height: 24px; /* Adjust height as needed */
-  vertical-align: middle; /* Ensures proper alignment */
+.demo-btn .ai-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
 }
 
 .demo-btn:hover {
   background-color: #f4f4f4;
 }
+
 .ai-icon {
-  width: 16px; /* Adjust width as needed */
-  height: 16px; /* Adjust height as needed */
-  animation: rotate360 2s linear infinite; /* Apply the animation */
+  width: 16px;
+  height: 16px;
+  animation: rotate360 2s linear infinite;
 }
 
 @keyframes rotate360 {
   from {
-    transform: rotate(0deg); /* Start from 0 degrees */
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(-360deg); /* Complete a full rotation */
+    transform: rotate(-360deg);
   }
 }
 
 .hero-image {
-  width: 1472px; /* Set the width as per Figma */
-  height: 643px; /* Set the height as per Figma */
-  margin-top: -520px; /* Add space above the image */
-  margin-right: 30px; /* Add space on the left side */
+  width: 1472px;
+  height: 643px;
+  margin-top: -520px;
+  margin-right: 30px;
   object-fit: contain;
+}
+/* end of the hero section*/
 
+/* tech land  */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+.tech-land {
+  padding: 50px;
+}
 
+.tech-land-heading {
+  font-size: 80px;
+  color: #18191C;
+  text-align: left;
+  margin-bottom: 50px;
+}
 
+.tech-land-content {
+  display: flex;
+  justify-content: space-between;
+}
 
+.tech-land-number-line-text {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 
+.tech-land-number-item {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
 
+.tech-land-num {
+  font-size: 30px;
+  font-weight: bold;
+  color: #E6E6E6;
+  margin-right: 10px;
+  transition: color 0.3s ease-in-out;
+  z-index: 2;
+}
 
+.tech-land-line-container {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 2px;
+  height: calc(100% + 30px); 
+  background-color: #ECEEF3;
+}
 
+.tech-land-line {
+  width: 100%;
+  height: 100%;
+  background-color: #ECEEF3;
+  transition: background-color 0.3s ease-in-out;
+}
 
+.tech-land-text {
+  flex: 1;
+  margin-left: 50px;
+}
 
+.tech-land-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #18191C;
+  line-height: 34px;
+  letter-spacing: -2%;
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.tech-land-description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #767A85;
+  line-height: 22px;
+  letter-spacing: -2%;
+}
+
+.tech-land-image-part {
+  width: 45%;
+  text-align: right;
+}
+
+.tech-land-main-image {
+  width: 100%;
+  height: auto;
+}
+
+.tech-land-number-item.active .tech-land-line {
+  background-color: #CC41E4;
+}
+
+.tech-land-number-item.active .tech-land-title {
+  background-image: linear-gradient(90deg, #DE35FF, #3A65FF, #16F1FF);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+ 
+}
+
+.tech-land-number-item.active .tech-land-num {
+  color: #18191C;
+}
+
+.tech-land-line {
+  transition: background-color 0.3s ease-in-out; 
+}
+
+.tech-land-num, .tech-land-title {
+  transition: color 0.2s ease-in-out;
+}
+/* end of the tech-land section*/ 
 
 /* Plans & Pricing Section */
 .plans-pricing {
@@ -260,7 +381,7 @@ body {
 
 .plans-cards {
   display: flex;
-  gap: 24px; /* Updated gap */
+  gap: 24px; 
   justify-content: center;
   box-shadow: #333;
 }
@@ -268,10 +389,10 @@ body {
 .plan-card {
   background-color: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 388px; /* Updated width */
-  height: 500px; /* Updated height */
-  border-radius: 20px; /* Updated radius */
-  overflow: hidden; /* Ensure rounded corners apply to inner content */
+  width: 388px; 
+  height: 500px; 
+  border-radius: 20px; 
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
 }
@@ -339,18 +460,15 @@ body {
   background-color: #333;
 }
 
-
-
-
 .free-plan {
-  padding: 20px; /* Add some padding for spacing */
-  text-align: left; /* Align all text to the left */
+  padding: 20px; 
+  text-align: left; 
 }
 
 .free-plan .plan-title,
 .free-plan .plan-price,
 .free-plan .plan-benefits {
-  text-align: left; /* Ensure each section is aligned to the left */
+  text-align: left; 
   margin-bottom: 20px;
 }
 
@@ -360,25 +478,6 @@ body {
   margin-bottom: 0.8rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Premium Plan: Part A */
 .premium-part-a {
   background: linear-gradient(to bottom, #DE35FF 0%, #3A65FF 64%, #16F1FF 100%);
   padding: 20px 30px;
@@ -395,7 +494,6 @@ body {
   
 }
 
-/* Premium Plan: Part B */
 .premium-part-b {
   background-color: #fff;
   flex-grow: 1;
@@ -408,14 +506,10 @@ body {
 
 .plans-cards .plan-card .plan-buttons {
   position: relative;
-  bottom: 35px; /* Adjust this to match horizontal alignment */
+  bottom: 35px; 
   align-content: center;
 }
-
-
-
-
-
+/* end of the plans section*/ 
 
 /* AI Section */
 .ai-section {
@@ -426,7 +520,6 @@ body {
   background-color: #ffffff;
 }
 
-/* AI Card */
 .ai-card {
   background-color: #F6F6F9;
   padding: 3rem;
@@ -435,11 +528,11 @@ body {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  position: relative; /* To allow absolute positioning for the image */
-  background-image: url('assets/Ellipse\ 2827.png'); /* Your background image */
-  background-position: left bottom; /* Position the image at the bottom left */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  background-size: auto; /* Adjust the size based on the image's natural dimensions */
+  position: relative; 
+  background-image: url('assets/Ellipse\ 2827.png'); 
+  background-position: left bottom; 
+  background-repeat: no-repeat; 
+  background-size: auto; 
 }
 
 .ai-title {
@@ -492,9 +585,7 @@ body {
   height: 24px;
   margin-left: 0.8rem;
 }
-
-
-
+/* end of the AI section */
 
 /* Footer Section */
 .footer-section {
@@ -504,7 +595,6 @@ body {
   color: #fff;
 }
 
-/* Footer Background Image */
 .footer-background {
   position: relative;
   width: 100%;
@@ -518,11 +608,8 @@ body {
   transform: translateX(-80px);
 }
 
-/* Navigation Links */
 .footer-nav {
-
   margin-top: 2rem;
-  
 }
 
 .footer-link {
@@ -537,7 +624,6 @@ body {
   color: #16F1FF;
 }
 
-/* Footer Logo */
 .footer-logo {
   margin-top: 2rem;
 }
@@ -548,28 +634,25 @@ body {
   margin: 0 auto;
 }
 
-/* AI Models Description */
 .footer-description {
-  font-size: 24px; /* Set the font size */
-  font-family: 'Poppins', sans-serif; /* Set the font family to Poppins */
-  font-weight: 400; /* Set the font weight */
-  line-height: 32px; /* Set the line height */
-  letter-spacing: -2%; /* Set the letter spacing */
-  text-align: center; /* Align the text to the center */
-  color: #7C848E; /* Keep the original color */
+  font-size: 24px; 
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 400;
+  line-height: 32px; 
+  letter-spacing: -2%; 
+  text-align: center; 
+  color: #7C848E;
   margin-top: 1.5rem;
   max-width: 800px;
   margin: 1.5rem auto;
-  width: 567px; /* Set the width as per Figma */
-  height: 96px; /* Set the height as per Figma */
+  width: 567px; 
+  height: 96px; 
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 90px;
 }
 
-
-/* Email Input and Group Icon */
 .footer-email {
   display: flex;
   justify-content: center;
@@ -580,7 +663,7 @@ body {
 .email-title {
   font-size: 70px;
   color: #3A3E44;
-  margin-right: 220px; /* Optional: to remove any default margins */
+  margin-right: 220px; 
 }
 
 .email-icon {
@@ -591,7 +674,6 @@ body {
  
 }
 
-/* Footer Line */
 .footer-line {
   margin-top: 2rem;
 }
@@ -600,149 +682,638 @@ body {
   width: 70%;
   height: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* mobile responsive */
-
-
-/* General Styles */
-/* General Styles */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.tech-land {
-  padding: 50px;
-}
-
-.tech-land-heading {
-  font-size: 80px;
-  color: #18191C;
-  text-align: left;
-  margin-bottom: 50px;
-}
-
-/* Content Layout */
-.tech-land-content {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Numbers, Lines, and Text Part */
-.tech-land-number-line-text {
-  width: 35%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.tech-land-number-item {
-  margin-bottom: 30px;
-  display: flex;
-  align-items: flex-start;
-  position: relative;
-}
-
-.tech-land-num {
-  font-size: 30px;
-  font-weight: bold;
-  color: #E6E6E6;
-  margin-right: 10px;
-  transition: color 0.3s ease-in-out;
-  z-index: 2;
-}
-
-.tech-land-line-container {
-  position: absolute;
-  top: 0;
-  left: 25px;
-  width: 2px;
-  height: calc(100% + 30px); /* Extend the line to connect items */
-  background-color: #ECEEF3;
-}
-
-.tech-land-line {
-  width: 100%;
-  height: 100%;
-  background-color: #ECEEF3;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.tech-land-text {
-  flex: 1;
-  margin-left: 50px;
-}
-
-.tech-land-title {
-  font-size: 24px;
-  font-weight: 500;
-  color: #18191C;
-  line-height: 34px;
-  letter-spacing: -2%;
-  margin-bottom: 10px;
-  transition: color 0.3s ease-in-out;
-}
-
-.tech-land-description {
-  font-size: 14px;
-  font-weight: 400;
-  color: #767A85;
-  line-height: 22px;
-  letter-spacing: -2%;
-}
-
-/* Image Part */
-.tech-land-image-part {
-  width: 45%;
-  text-align: right;
-}
-
-.tech-land-main-image {
-  width: 100%;
-  height: auto;
-}
-
-/* Active State */
-.tech-land-number-item.active .tech-land-line {
-  background-color: #CC41E4;
-}
-
-.tech-land-number-item.active .tech-land-title {
-  background-image: linear-gradient(90deg, #DE35FF, #3A65FF, #16F1FF);
-  -webkit-background-clip: text; /* Clips the background to the text */
-  -webkit-text-fill-color: transparent; /* Makes the text transparent to show the background */
-  background-clip: text; /* Fallback for non-webkit browsers */
-  /* Fallback for non-webkit browsers */
-}
-
-.tech-land-number-item.active .tech-land-num {
-  color: #18191C;
-}
-
-.tech-land-line {
-  transition: background-color 0.3s ease-in-out; /* Adjust as needed */
-}
-
-.tech-land-num, .tech-land-title {
-  transition: color 0.2s ease-in-out;
-}
-
+/* end of the footer */
 
 
 /* Mobile responsive*/
+
+/* navigation bar */
+@media (max-width: 768px) {
+  .navbar-center {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  .navbar-mobile {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-mobile.active {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+}
+/* end of the navigation*/
+
+/* hero section*/
+/* mobile responsive for hero section*/
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 100px;
+    line-height: 110px;
+    margin-bottom: 6rem;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-left, .hero-right {
+    flex: unset;
+    width: 100%;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 2rem;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .hero-buttons {
+    flex-direction: row; /* Align buttons horizontally */
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    margin-top: -100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem;
+  }
+
+  .hero-title {
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 0.6rem 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row; /* Align buttons horizontally */
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .hero-image {
+    margin-top: -50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .hero-description {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row; /* Align buttons horizontally */
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .hero-image {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+/*end of the hero section*/
+
+/* tech-land section*/
+@media (max-width: 1200px) {
+  .tech-land-heading {
+    font-size: 60px;
+  }
+
+  .tech-land-content {
+    flex-direction: column;
+  }
+
+  .tech-land-number-line-text {
+    width: 90%;
+  }
+
+  .tech-land-number-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .tech-land-num {
+    font-size: 24px;
+    margin-right: 15px;
+  }
+
+  .tech-land-line-container {
+    width: 2px;
+    height: auto;
+    background-color: #ECEEF3;
+    margin-right: 15px;
+  }
+
+  .tech-land-text {
+    flex: 1;
+    margin: 0;
+  }
+
+  .tech-land-title {
+    font-size: 22px;
+  }
+
+  .tech-land-description {
+    font-size: 14px;
+  }
+
+  .tech-land-image-part {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tech-land-main-image {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-land-heading {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .tech-land-content {
+    align-items: center;
+  }
+
+  .tech-land-number-line-text {
+    width: 100%;
+  }
+
+  .tech-land-number-item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .tech-land-num {
+    font-size: 20px;
+  }
+
+  .tech-land-line-container {
+    height: 80px;
+  }
+
+  .tech-land-title {
+    font-size: 18px;
+  }
+
+  .tech-land-description {
+    font-size: 12px;
+  }
+
+  .tech-land-main-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-land-heading {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .tech-land-number-item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .tech-land-num {
+    font-size: 18px;
+  }
+
+  .tech-land-line-container {
+    height: 150px;
+   margin-left: -8px;
+  }px
+
+  .tech-land-title {
+    font-size: 16px;
+  }
+
+  .tech-land-description {
+    font-size: 12px;
+  }
+
+  .tech-land-image-part {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .tech-land-main-image {
+    width: 90%;
+    height: auto;
+  }
+}
+ /* end of the tech land section*/
+
+ /* plan section*/
+ @media (max-width: 1200px) {
+  .plans-title {
+    font-size: 60px;
+  }
+  .plans-subtitle {
+    font-size: 14px;
+  }
+  .plans-cards {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .plan-card {
+    width: 45%;
+    height: auto;
+  }
+  .plan-card .plan-title {
+    font-size: 20px;
+  }
+  .plan-price {
+    font-size: 40px;
+  }
+  .price-amount {
+    font-size: 36px;
+  }
+  .price-month {
+    font-size: 16px;
+  }
+  .plan-benefits {
+    font-size: 14px;
+  }
+  .plan-btn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .plans-title {
+    font-size: 48px;
+  }
+  .plans-subtitle {
+    font-size: 12px;
+  }
+  .plans-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .plan-card {
+    width: 90%;
+  }
+  .plan-card .plan-title {
+    font-size: 18px;
+  }
+  .plan-price {
+    font-size: 32px;
+  }
+  .price-amount {
+    font-size: 28px;
+  }
+  .price-month {
+    font-size: 14px;
+  }
+  .plan-benefits {
+    font-size: 12px;
+  }
+  .plan-btn {
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .plans-title {
+    font-size: 36px;
+  }
+  .plans-subtitle {
+    font-size: 10px;
+  }
+  .plans-cards {
+    gap: 12px;
+  }
+  .plan-card {
+    width: 100%;
+    padding: 10px;
+  }
+  .plan-card .plan-title {
+    font-size: 16px;
+  }
+  .plan-price {
+    font-size: 24px;
+  }
+  .price-amount {
+    font-size: 20px;
+  }
+  .price-month {
+    font-size: 12px;
+  }
+  .plan-benefits {
+    font-size: 10px;
+  }
+  .plan-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 10px;
+  }
+  .premium-part-a {
+    padding: 15px;
+    height: auto;
+  }
+  .premium-part-b {
+    padding: 15px;
+  }
+}
+
+/* end of the plan section*/
+
+/* AI section*/
+/* mobile responsive for ai section*/
+@media (max-width: 1200px) {
+  .ai-title {
+    font-size: 64px;
+    line-height: 72px;
+  }
+
+  .ai-card {
+    padding: 2.5rem;
+  }
+
+  .ai-subtitle {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .ai-buttons {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .ai-btn {
+    font-size: 14px;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .ai-icon1, .ai-icon2 {
+    width: 20px;
+    height: 20px;
+    margin-left: 0.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .ai-card {
+    padding: 2rem;
+  }
+
+  .ai-subtitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .ai-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .ai-btn {
+    font-size: 14px;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .ai-icon1, .ai-icon2 {
+    width: 18px;
+    height: 18px;
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .ai-card {
+    padding: 1.5rem;
+  }
+
+  .ai-subtitle {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .ai-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .ai-btn {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+  }
+
+  .ai-icon1, .ai-icon2 {
+    width: 16px;
+    height: 16px;
+    margin-left: 0.4rem;
+  }
+}
+/* end of the AI section*/
+
+/* footer section*/
+@media (max-width: 768px) {
+  .footer-bg-img {
+    transform: translateX(0);
+    margin-bottom: -200px;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .footer-link {
+    font-size: 12px;
+    margin: 0.5rem 0;
+  }
+
+  .footer-logo {
+    margin-top: 1.5rem;
+  }
+
+  .footer-logo-img {
+    width: 120px;
+  }
+
+  .footer-description {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 100%;
+    width: auto;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .footer-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .email-title {
+    font-size: 20px;
+    margin-right: 0.5rem;
+    text-align: center;
+    margin-bottom: 0; 
+  }
+
+  .email-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 0.5rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  /* Footer Section */
+  .footer-section {
+    padding: 2rem 1rem;
+  }
+
+  .footer-link {
+    font-size: 14px;
+    margin: 0.5rem;
+  }
+
+  .footer-logo-img {
+    width: 100px;
+  }
+
+  .footer-description {
+    font-size: 16px;
+    line-height: 24px;
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .footer-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .email-title {
+    font-size: 18px;
+    margin-right: 0.3rem; 
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .email-icon {
+    width: 25px;
+    height: 25px;
+    margin-left: 0.3rem; 
+  }
+
+  .footer-line-img {
+    width: 95%;
+    height: auto;
+  }
+
+  .contact-btn{
+    font-size: 12px;
+    padding: 0.3rem 1rem;
+    margin-right: 10px;
+  } 
+}
+/*end of the footer section */
+
+
+
+
+
+
+
+
