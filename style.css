@@ -106,6 +106,8 @@ body {
 
 
 
+
+
 /* Hero Section */
 .hero {
   padding: 4rem;
@@ -223,10 +225,19 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+
 /* Plans & Pricing Section */
 .plans-pricing {
   padding: 4rem 2rem;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   text-align: center;
 }
 
@@ -244,30 +255,38 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: #666;
+  text-align: center;
 }
 
 .plans-cards {
   display: flex;
-  gap: 1rem;
+  gap: 24px; /* Updated gap */
   justify-content: center;
+  box-shadow: #333;
 }
 
 .plan-card {
   background-color: #fff;
-  padding: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  text-align: left; /* Align text to the left */
+  width: 388px; /* Updated width */
+  height: 500px; /* Updated height */
+  border-radius: 20px; /* Updated radius */
+  overflow: hidden; /* Ensure rounded corners apply to inner content */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensure that button is positioned lower */
 }
 
-.free-plan .plan-title,
-.premium-plan .plan-title {
+.plan-card .plan-title {
   font-size: 24px;
   font-weight: 500;
-  margin-bottom: 1rem;
+}
+
+
+.price-month{
+  font-size: 20px;
+}
+.price-amount{
+  font-size: 52px;
 }
 
 .plan-price {
@@ -276,25 +295,12 @@ body {
   color: #18191C;
 }
 
-.price-amount {
-  font-size: 52px;
-  color: #18191C;
-  font-weight: 500;
-}
-
-.price-month {
-  font-size: 20px;
-  font-weight: 500;
-  color: #18191C;
-}
-
 .plan-benefits {
   margin: 1.5rem 0;
-  text-align: left;
+  font-size: 16px;
 }
 
 .benefit {
-  font-size: 16px;
   display: flex;
   align-items: center;
   margin-bottom: 0.8rem;
@@ -313,9 +319,9 @@ body {
 }
 
 .plan-buttons {
+  margin-top: auto;
   display: flex;
-  justify-content: center; /* Center the button horizontally */
-  margin-top: auto; /* Push the button to the bottom of the card */
+  justify-content: center;
 }
 
 .plan-btn {
@@ -333,49 +339,82 @@ body {
   background-color: #333;
 }
 
-/* First card: Fee plan (left-aligned, white background) */
+
+
+
 .free-plan {
-  background-color: #fff;
+  padding: 20px; /* Add some padding for spacing */
+  text-align: left; /* Align all text to the left */
 }
 
-/* Second card: Premium plan with split background */
-.premium-plan {
+.free-plan .plan-title,
+.free-plan .plan-price,
+.free-plan .plan-benefits {
+  text-align: left; /* Ensure each section is aligned to the left */
+  margin-bottom: 20px;
+}
+
+.plan-benefits .benefit {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Premium Plan: Part A */
+.premium-part-a {
+  background: linear-gradient(to bottom, #DE35FF 0%, #3A65FF 64%, #16F1FF 100%);
+  padding: 20px 30px;
+  height: 174px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: #fff;
+  text-align: left;
+}
+
+.premium-part-a .plan-title,
+.premium-part-a .plan-price {
+  margin-bottom: 20px;
+  
+}
+
+/* Premium Plan: Part B */
+.premium-part-b {
+  background-color: #fff;
+  flex-grow: 1;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  justify-content: space-between;
 }
 
-/* Top section with gradient background */
-.premium-top {
-  background: linear-gradient(to bottom, #DE35FF 0%, #3A65FF 64%, #16F1FF 100%);
-  padding: 2rem;
-  text-align: left;
-  color: #fff;
+.plans-cards .plan-card .plan-buttons {
+  position: relative;
+  bottom: 35px; /* Adjust this to match horizontal alignment */
+  align-content: center;
 }
 
-.premium-top .plan-title {
-  font-size: 24px;
-  color: #fff;
-}
 
-.premium-top .plan-price {
-  font-size: 52px;
-  color: #fff;
-}
 
-/* Bottom section with white background */
-.plan-benefits {
-  background-color: #fff;
-  color: #000;
-  padding: 2rem;
-  border-radius: 0 0 8px 8px;
-  margin-top: 1rem; /* Add some space between the price and the benefits section */
-}
 
-.premium-plan .check-icon {
-  background-color: #D1FADF;
-  color: #12B76A;
-}
 
 
 /* AI Section */
@@ -574,128 +613,136 @@ body {
 
 
 
-/* Tech-Land Section */
-.tech-land-section {
-  background: #fff;
-  padding: 4rem 2rem;
-  font-family: 'Arial', sans-serif;
+
+
+
+/* mobile responsive */
+
+
+/* General Styles */
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Title */
-.tech-land-title {
-  font-size: 50px;
+.tech-land {
+  padding: 50px;
+}
+
+.tech-land-heading {
+  font-size: 80px;
   color: #18191C;
-  font-weight: 500;
-  margin-bottom: 2rem;
   text-align: left;
+  margin-bottom: 50px;
 }
 
-/* Content Wrapper */
+/* Content Layout */
 .tech-land-content {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-/* Number List */
-.number-list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1;
-}
-
-.number {
-  font-size: 24px;
-  color: #A5A5A5;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.number.active {
-  color: #6E34F6;
-}
-
-.number::before {
-  content: '';
-  width: 2px;
-  height: 100%;
-  background-color: #D8D8D8;
-  position: absolute;
-  left: -20px;
-  top: 0;
-}
-
-/* Text Content */
-.content-part {
-  flex: 2;
-}
-
-.content-item {
-  margin-bottom: 2rem;
-}
-
-.content-image {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 1rem;
-}
-
-.content-title {
-  font-size: 18px;
-  color: #18191C;
-  margin-bottom: 0.5rem;
-}
-
-.content-title.active {
-  color: #6E34F6;
-}
-
-.content-description {
-  font-size: 14px;
-  color: #767A85;
-  line-height: 1.5;
-}
-
-/* Case Study Card */
-.case-study-card {
-  flex: 2;
-  background: linear-gradient(180deg, rgba(110, 52, 246, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.05);
-}
-
-.case-study-card h3 {
-  font-size: 18px;
-  font-weight: 500;
-  color: #18191C;
-  margin-bottom: 1rem;
-}
-
-.case-study-card p {
-  font-size: 14px;
-  color: #767A85;
-  margin-bottom: 2rem;
-}
-
-.case-study-stats {
   display: flex;
   justify-content: space-between;
 }
 
-.stat {
-  text-align: center;
+/* Numbers, Lines, and Text Part */
+.tech-land-number-line-text {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-.stat span {
+.tech-land-number-item {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.tech-land-num {
+  font-size: 30px;
+  font-weight: bold;
+  color: #E6E6E6;
+  margin-right: 10px;
+  transition: color 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.tech-land-line-container {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 2px;
+  height: calc(100% + 30px); /* Extend the line to connect items */
+  background-color: #ECEEF3;
+}
+
+.tech-land-line {
+  width: 100%;
+  height: 100%;
+  background-color: #ECEEF3;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.tech-land-text {
+  flex: 1;
+  margin-left: 50px;
+}
+
+.tech-land-title {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
+  color: #18191C;
+  line-height: 34px;
+  letter-spacing: -2%;
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.tech-land-description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #767A85;
+  line-height: 22px;
+  letter-spacing: -2%;
+}
+
+/* Image Part */
+.tech-land-image-part {
+  width: 45%;
+  text-align: right;
+}
+
+.tech-land-main-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Active State */
+.tech-land-number-item.active .tech-land-line {
+  background-color: #CC41E4;
+}
+
+.tech-land-number-item.active .tech-land-title {
+  background-image: linear-gradient(90deg, #DE35FF, #3A65FF, #16F1FF);
+  -webkit-background-clip: text; /* Clips the background to the text */
+  -webkit-text-fill-color: transparent; /* Makes the text transparent to show the background */
+  background-clip: text; /* Fallback for non-webkit browsers */
+  /* Fallback for non-webkit browsers */
+}
+
+.tech-land-number-item.active .tech-land-num {
   color: #18191C;
 }
 
-.stat p {
-  font-size: 14px;
-  color: #767A85;
+.tech-land-line {
+  transition: background-color 0.3s ease-in-out; /* Adjust as needed */
 }
+
+.tech-land-num, .tech-land-title {
+  transition: color 0.2s ease-in-out;
+}
+
+
+
+/* Mobile responsive*/
